@@ -1,3 +1,5 @@
+@props(['job'])
+
 <x-card
     class="flex flex-col text-center">
 
@@ -8,9 +10,9 @@
     </div>
     <div class="flex justify-between items-center mt-auto">
         <div>
-            <x-tag size="small">Backend</x-tag>
-            <x-tag size="small">Frontend</x-tag>
-            <x-tag size="small">Design</x-tag>
+            @foreach($job->tags as $tag)
+                <x-tag :tag size="small">Backend</x-tag>
+            @endforeach
 
 
         </div>

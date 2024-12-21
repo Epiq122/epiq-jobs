@@ -1,3 +1,5 @@
+@props(['job'])
+
 <x-card
     class="flex gap-6">
     <div>
@@ -16,9 +18,10 @@
 
 
     <div>
-        <x-tag>tag</x-tag>
-        <x-tag>tag</x-tag>
-        <x-tag>tag</x-tag>
+        @foreach($job->tags as $tag)
+            <x-tag :tag>Backend</x-tag>
+        @endforeach
+
 
     </div>
 
